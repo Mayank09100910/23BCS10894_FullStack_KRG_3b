@@ -1,0 +1,107 @@
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #fff;
+  --card-bg: #fff;
+}
+
+body.dark {
+  --bg-color: #1e1e2f;
+  --text-color: #f4f4f9;
+  --sidebar-bg: #111;
+  --sidebar-text: #f4f4f9;
+  --card-bg: #2b2b3c;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Dashboard Layout with Grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar nav a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  margin: 10px 0;
+  display: block;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.sidebar button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+}
+
+.card span {
+  font-size: 1.4em;
+  display: block;
+  margin-top: 10px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.chart {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
