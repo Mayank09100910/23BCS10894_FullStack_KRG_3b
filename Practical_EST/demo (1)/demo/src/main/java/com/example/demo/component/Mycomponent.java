@@ -1,0 +1,11 @@
+package com.example.demo.component;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Mycomponent {
+
+    public void showMessage() {
+        System.out.println(" Message from @Component class");
+    }
+}
